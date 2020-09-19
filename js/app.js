@@ -1,4 +1,3 @@
-// @include("files/regular.js", {});
 let userIcon = document.querySelector(".user-header__icon");
 let userMenu = document.querySelector(".user-header__menu");
 userIcon.addEventListener("click", function (e) {
@@ -706,7 +705,14 @@ let quotes_slider = new Swiper(".slider-quotes__body", {
   navigation: {
     nextEl: ".control-slider-quotes__circle",
   },
-
+  breakpoints: {
+    320: {
+      autoHeight: true,
+    },
+    570: {
+      autoHeight: false,
+    },
+  },
   on: {
     lazyImageReady: function () {
       ibg();
